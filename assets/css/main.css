@@ -2946,8 +2946,8 @@ input, select, textarea {
 
 		/* Section/Article */
 
-			header.major p {
-				font-size: 1.25em;
+			header.major p, h2 {
+				font-size: 1em;
 			}
 
 		/* Header */
@@ -3300,3 +3300,249 @@ input, select, textarea {
 				}
 
 	}
+
+	
+	/* Navbar */
+	
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px ;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 30px;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+	border: none;
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+	align-items:center;
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+	border:none;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #8353B9;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    
+    .max-width{
+        max-width: 930px;
+    }
+    
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+   
+}
+
+@media (max-width: 500px) {
+    
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
+
+
+/* Skill */
+
+.skills{
+	text-align: left;
+	width: 500px;
+	height: 100vh;
+	margin: 60px auto;
+;
+}
+
+.skills li{
+	margin: 20px 0;
+	list-style: none;
+}
+
+.bar{
+	background: #353b48;
+	display:block;
+	height: 2px;
+	/* border: 1px solid rgba(255,255,255,0.1); */
+	border-radius: 3px;
+	background: white;
+	overflow:hidden;
+	box-shadow: 0 0 10px crimson;
+	z-index: 1;
+}
+
+.bar span{
+	height: 10px;
+	float: left;
+	background: crimson;
+	z-index: 10;
+}
+
+.html{
+	width: 80%;
+	animation: html 2s;
+}
+
+.css{
+	width: 65%;
+	animation: css 2s;
+
+}
+
+.javascript{
+	width: 60%;
+	animation: javascript 2s;
+
+}
+
+.nodejs{
+	width: 50%;
+	animation: nodejs 2s;
+
+}
+
+@keyframes html{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 80%
+	}
+}
+
+@keyframes css{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 65%;
+	}
+}
+
+@keyframes javascript{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 60%;
+	}
+}
+
+@keyframes nodejs{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 50%;
+		}
+}
