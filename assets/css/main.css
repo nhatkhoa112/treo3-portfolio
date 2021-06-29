@@ -3711,3 +3711,14 @@ ul.menu {
     font-size: 1rem;
   }
 }
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+form {
+  margin: 0 0 0.6em 0 !important;
+  line-height: 17px;
+}
